@@ -1,0 +1,17 @@
+#Random number generator to create 100 items
+import random
+array=[]
+for i in range (100):
+    array.append(random.randrange(1,50,1))
+print (array)
+#create a dictionary and assign the elements of the array as key and the number of occurences as value
+occ={};        
+for a in array: 
+    temp=a;
+    if temp in occ.keys():
+        i =occ.get(temp);
+        occ[temp] = i+1;
+    else:
+        occ[temp] = 1;
+print(occ);
+        
